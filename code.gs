@@ -1,3 +1,7 @@
+/**
+ * シートを編集する関数です
+ * return {void}
+ */
 function inspectionManage() {
   var sp = SpreadsheetApp.getActiveSpreadsheet();
   var data = csvChange(DriveApp.getFilesByName(folderSearch("2017csvDataForInsp")[0]).next());
