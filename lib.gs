@@ -28,19 +28,22 @@ function folderSearch(folderName){
   return file;
 }
 
-//日付処理エンジン
-function dateNumberDiff(){
-  var Num = "20170529";
+/**
+ *日付処理関数
+ * var dateFlag = dateNumberDiff("20170520") 
+ * @param {String} dateString yyyyMMdd形式の日付文字列
+ * @return {Boolean} true or false 日付範囲内に入っているかどうかを返します
+ */
+function dateNumberDiff(dateString){
+  //var dateString = "20170529";
   var diff = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyyMMdd')
   var int = parseInt(Num,10);
   var diffInt = parseInt(diff,10);
   if(int > diffInt && int < (diffInt + 7) ){
-  Logger.log("INT<DIFF")
+    Logger.log("INT<DIFF")
   }else if(int === diffInt){
-  Logger.log("INT=DIFF");
+    Logger.log("INT=DIFF");
   }else{
-  Logger.log("else")
+    Logger.log("else")
   }
-  
-
 }
