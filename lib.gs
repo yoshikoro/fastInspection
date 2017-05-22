@@ -29,3 +29,18 @@ function folderSearch(folderName){
 }
 
 //日付処理エンジン
+function dateNumberDiff(){
+  var Num = "20170529";
+  var diff = Utilities.formatDate(new Date(), 'Asia/Tokyo', 'yyyyMMdd')
+  var int = parseInt(Num,10);
+  var diffInt = parseInt(diff,10);
+  if(int > diffInt && int < (diffInt + 7) ){
+  Logger.log("INT<DIFF")
+  }else if(int === diffInt){
+  Logger.log("INT=DIFF");
+  }else{
+  Logger.log("else")
+  }
+  
+
+}
